@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>فواتير المستشفى</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <link rel="icon" href="../dist/img/logo.png" type="image/png" sizes="16x16">
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/css/all.css" rel="stylesheet">
+    <link href="../dist/css/styles.css" rel="stylesheet">
+    <link href="../dist/css/custom-rtl.min.css" rel="stylesheet">
+    <link href="../dist/lib/iziToast.min.css" rel="stylesheet">
+        <link href="../dist/css/loading.css" rel="stylesheet">
+
+</head>
+
+<body class="sb-nav-fixed">
+
+    <div id="loading" class="loading">
+        <div class="lds-ripple"><div></div><div></div></div>
+      </div>
+
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"> لوحة تحكم </a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fal fa-bars"></i></button
+            >
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+             
+        </div>
+        </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-user fa-fw"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="profile.html">الصفحة الشخصية</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" id="logout" href="#">تسجيل خروج</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+           
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">فواتير المستشفى</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a href="index.html">لوحة التحكم</a></li>
+                        <li class="breadcrumb-item active">فواتير المستشفى</li>
+                    </ol>
+                    <div class="card mb-4">
+                        <div class="card-body">ملاحظات واجهة فواتير المستشفى</div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header"><i class="fal fa-table mr-1"></i>بيانات الجدول 
+                            <!-- <i class="float-left fal fa-plus fa-3x btn text-primary p-0 m-0" data-toggle="modal" data-target="#addModal"></i> -->
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>الرقم التعريفي</th>
+                                            <th>رمز الفاتورة </th>
+                                            <th>هاتف المستخدم</th>
+                                            <th>رمز الحجز</th>
+                                            <th>المجموع الكلي</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>الرقم التعريفي</th>
+                                            <th>رمز الفاتورة </th>
+                                            <th>هاتف المستخدم</th>
+                                            <th>رمز الحجز</th>
+                                            <th>المجموع الكلي</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        
+                                        <!-- <tr>
+                                            <td>
+                                                <a href="# "> <i class="fal fa-edit"></i> </a>
+                                                <a href="# "><i class="fal fa-trash"></i ></a>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+
+            <footer class="py-4 bg-light mt-auto">
+                 <!--Copyright-->
+    <div class="Copyright text-center">
+        <div class="container">
+            <!--text-uppercase كلاس بوت استراب للتحويل لكابيبتال-->
+            Copyright <span>Dawakom </span><script>document.write(new Date().getFullYear())</script>  &copy; All Righ Reserved
+        </div>
+    </div>
+            </footer>
+        </div>
+    </div>
+     <!-- auth -->
+     <script language="javascript" src="js/proxy/http/auth.js" type="module"></script>
+     <script language="javascript" src="js/proxy/pages/acccess.js" type="module"></script>
+     
+     <script src="../dist/js/jquery-3.4.1.min.js"></script>
+     <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+     <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+     <script src="../dist/js/popper.js"></script>
+     <script src="../dist/js/bootstrap.min.js"></script>
+     <script src="../dist/js/scripts.js"></script>
+     <script src="../dist/lib/iziToast.min.js"></script>
+
+    <script src="js/proxy/add_handling.js" type="module"></script>
+    
+        <!-- proxy  -->
+        <script src="../dist/lib/axios.js"></script>
+
+        <script src="js/proxy/pages/allHospitalInvoices.js" type="module"></script>
+        <script src="js/proxy/process/logout.js" type="module"></script>
+        <script src="js/proxy/common/notification.js" type="module"></script>
+
+</body>
+
+</html>

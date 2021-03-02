@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Italianno&display=swap&subset=latin-ext');
+
+/*====================bar============================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a {
+  font-family: 'Tajawal', sans-serif !important;
+  font-weight: bold;
+}
+
+.btn-model {
+  border-radius: 20px;
+  background-color: #00013d;
+  color: #fff;
+}
+
+.btn-model:hover {
+  background-color: #eeb312;
+  color: #fff;
+}
+
+a {
+  color: #00013d;
+}
+
+span {
+  color: #eeb312;
+}
+
+.btn-contact {
+  width: 30%;
+  display: block;
+}
+
+/*====================nav-bar============================*/
+
+.navbar-brand > span {
+  font-size: 32px;
+  font-family: 'Italianno', cursive;
+}
+
+.navbar-nav .nav-link {
+  font-size: 20px;
+  margin-left: 20px;
+  color: #08526d !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #eeb312 !important;
+}
+
+.navbar-nav .active > .nav-link {
+  color: #eeb312 !important;
+}
+
+/*====================slider============================*/
+
+.slider .carousel-item {
+  background-size: cover;
+}
+
+.slider .carousel-inner .img_1 {
+  background-image: url('../img/dawakom/kendal-L4iKccAChOc-unsplash.jpg');
+}
+
+.slider .carousel-inner .img_2 {
+  background-image: url('../img/dawakom/kate-hliznitsova-hEX5R8u7gCI-unsplash.jpg');
+}
+
+.slider .carousel-inner .img_3 {
+  background-image: url('../img/dawakom/online-marketing-hIgeoQjS_iE-unsplash.jpg');
+}
+
+.slider .carousel-inner h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.slider .carousel-inner p {
+  line-height: 2;
+  font-size: 20px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.slider .carousel-inner .overlay {
+  position: absolute;
+  z-index: 2;
+  background-color: #0110363d;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.slider .carousel-inner .carousel-caption {
+  margin-bottom: 10%;
+}
+
+@media (max-width: 576px) {
+  .slider .carousel-inner h2 {
+    font-size: 30px;
+  }
+  .slider .carousel-inner p {
+    line-height: 1.5;
+    font-size: 16px;
+  }
+}
+
+/*====================media-abo============================*/
+
+.service {
+  padding: 120px 0;
+}
+
+.service h3 {
+  color: #eeb312;
+}
+
+/*************.offers**************/
+
+.offers {
+  /* background: url('../img/offers.jpg') no-repeat center center fixed;
+  background-size: cover; */
+  background-color: rgb(253, 252, 252);
+  min-height: 500px;
+  color: black;
+  font-weight: bold;
+}
+
+.offers .over-Offers {
+  background-color: #d2d1dd46;
+  min-height: 500px;
+}
+
+.offers .over-Offers .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  color: black;
+}
+
+.offers .over-Offers .card img {
+  position: relative;
+  width: 60%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  height: 60%;
+}
+
+.offers .over-Offers .card .card-body h5 {
+  color: #eeb312;
+  font-weight: bold;
+}
+
+.offers .over-Offers .card {
+  transition: 0.5s ease;
+}
+
+.offers .over-Offers .card:hover {
+  box-shadow: 3px 3px 30px #fff;
+}
+
+/*************Choose Us**************/
+
+.Choose_Us {
+  background-color: #08526d;
+}
+
+.Choose_Us h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 40px;
+  color: #eeb312;
+}
+
+.Choose_Us h2 span:first-child {
+  color: #fff;
+}
+
+.Choose_Us img {
+  max-width: 100%;
+}
+
+.Choose_Us .col-lg-6:first-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.Choose_Us .col-lg-6:last-child {
+  background-color: #08526d;
+  color: #fff;
+}
+
+.Choose_Us p {
+  margin: 10px 50px;
+  line-height: 1.5;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.Choose_Us button {
+  margin: 10px 50px;
+  font-weight: bold;
+}
+
+#more {
+  display: none;
+}
+
+/*====================Contact_Us============================*/
+
+.contact_us {
+  padding: 100px 0;
+}
+
+.contact_us h2 {
+  padding-bottom: 50px;
+  color: #08526d;
+}
+
+.contact_us .clip {
+  padding: 20px 0;
+  background-color: #8ce0ff;
+  -webkit-clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+}
+
+.contact_us p {
+  margin: 20px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.contact_form ul li a {
+  color: #08526d;
+}
+
+.contact_form ul li a:hover {
+  color: #eeb312;
+}
+
+@media (max-width: 768px) {
+  .contact_us p {
+    text-align: justify;
+    font-size: 14px;
+    padding-bottom: 30px;
+  }
+}
+
+/*==================== Copyright ============================*/
+
+.Copyright {
+  padding: 10px;
+}
+
+.Copyright span:first-of-type {
+  color: #08526d;
+  font-weight: bold;
+}
+
+.Copyright span:last-of-type {
+  color: #eeb312;
+}
+
+.Copyright .heart {
+  color: #eeb312;
+}
+
+/**************************************/
+
+.button_top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: white;
+  background-color: #08526d;
+  padding: 15px;
+  display: none;
+  opacity: 0.8;
+  border-radius: 25px;
+}
+
+.button_top:hover {
+  background-color: #eeb312;
+  cursor: pointer;
+}
+
+/*************************************/
+
+.login {
+  padding-top: 10%;
+}
+
+.login h1 {
+  float: left;
+  border-bottom: 4px solid #08526d;
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.login .form-group {
+  border-bottom: 1px solid #08526d;
+  width: 100%;
+  padding: 10px 0;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.login .form-group input {
+  border: none;
+  outline: none;
+  background: none;
+  display: inline-block;
+}
+
+.login .form-group .form-control {
+  width: 92%;
+}
+
+.login .btn {
+  width: 100%;
+  border-color: #08526d;
+}
+
+/*************************************/
+
+.breadcrumb {
+  background-color: #fff;
+}

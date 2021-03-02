@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>الصفحة الشخصية</title>
+    
+    <link rel="icon" href="./img/logo.png" type="image/png" sizes="16x16">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/custom-rtl.min.css" rel="stylesheet">
+    <link href="lib/iziToast.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/loading.css">
+  
+</head>
+
+<body class="sb-nav-fixed">
+
+    <div id="loading" class="loading">
+        <div class="lds-ripple"><div></div><div></div></div>
+      </div>
+
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"> الضبط </a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fal fa-bars"></i></button
+            ><!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+               
+        </div>
+        </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fal fa-user fa-fw"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="profile.html">الصفحة الشخصية</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" id="logout" href="#">تسجيل خروج</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_nav">
+            <!-- <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link" href="index.html">
+                             الضبط </a>
+
+                        <div class="sb-sidenav-menu-heading">الصفحات</div>
+                        <a class="nav-link" href="user.html">
+                            المستخدمين</a>
+                            
+                            <a class="nav-link" href="setting.html">
+                                الضبط</a>
+                        <a class="nav-link" href="bills.html">
+                            الفواتير </a>
+                        <a class="nav-link" href="accounts.html">
+                            الحسابات الإلكترونية</a>
+                        <a class="nav-link" href="requests.html">
+                            الطلبات</a>
+                        <a class="nav-link" href="supplier.html">
+                                التوريدات</a>
+                        <a class="nav-link" href="sa-user.html">
+                                    البحث عن مستخدم</a>
+                        <a class="nav-link" href="medicine.html">
+                                        الدواء</a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">تسجيل دخولك</div>
+                    اسم المستخدم
+                </div>
+            </nav> -->
+        </div>
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4"> البيانات الشخصية </h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active"> البيانات الشخصية</li>
+                    </ol>
+
+                    <div class="jumbotron bg-white p-0">
+                     
+                        <div class="d-flex flex-row">
+
+                            <div class="col-4 border-left border-dark">
+                                <div class="d-flex flex-column justify-content-around align-items-center">
+
+                                   <div class="position-relative mb-3">
+                                    <span class="fal fa-user-crown fa-4x text-dark p-4 border rounded-circle"></span>
+                                   </div>
+
+                                   <h1>Admin</h1>
+
+                                    <div class="fullName mb-3">
+                                        <span class="fal fa-user"></span>
+                                        <small class="text-muted adminName ml-1">
+                                            Mohamed Ahmed Abd-Elgader
+                                        </small>
+                                    </div>
+                                    <div class="phoneNumber mb-3">
+                                        <span class="fal fa-phone"></span>
+                                        <small class="text-muted adminPhone ml-1">+249 999566065</small>
+                                    </div>
+                                    <div class="Email mb-3">
+                                        <span class="fal fa-envelope"></span>
+                                        <small class="text-muted adminEmail ml-1">mohamedx.28@gmail.com</small>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                                <form action="" id="form_submit" method="post" class="col-8 d-flex flex-column justify-content-around">
+                                    <input type="hidden" value="" name="id" id="adminId">
+                                    <div class="fullName">
+                                        <label for="fullName">الإسم كامل</label>
+                                        <input type="text" class="form-control" name="fullName" id="fullName" required>
+                                    </div>
+                                    <div class="email">
+                                        <label for="email">البريد الإلكتروني</label>
+                                        <input type="text" class="form-control" name="email" id="email" required>
+                                    </div>
+                                    <div class="phoneNumber">
+                                        <label for="phoneNumber">رقم الهاتف</label>
+                                        <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" minlength="10" required>
+                                    </div>
+                                    <button type="submit" class="btn" style="background-color: #00013d ;color: white;">تحديث</button>
+                                </form>
+
+                        </div>
+
+                    </div>
+
+
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; swar 2020 </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+         <!-- auth -->
+         <script language="javascript" src="js/proxy/http/auth.js" type="module"></script>
+         <script language="javascript" src="js/proxy/pages/acccess.js" type="module"></script>
+
+        <script src="js/jquery-3.4.1.min.js "></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="lib/iziToast.min.js"></script>
+
+        <!-- proxy  -->
+        <script src="lib/axios.js"></script>
+        <!-- procceses -->
+        <script type="module" src="js/proxy/add_handling.js"></script>
+        <script type="module" src="js/proxy/pages/profile.js"></script>
+        <script src="js/proxy/process/logout.js" type="module"></script>
+
+
+</body>
+
+</html>

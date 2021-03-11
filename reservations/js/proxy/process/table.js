@@ -63,20 +63,24 @@
 
          var active = $(`#${id} .activity`).text();
 
-        if(active == "1"){
+        if(active == "نشط"){
             $('#UpdateSubmit input[name=activity]').attr('checked', true);
-            $('#UpdateSubmit input[name=activity]').attr('value',active);
-        }if(active == "0"){
+            $('#UpdateSubmit input[name=activity]').attr('value', active);
+        }if(active == "غير نشط"){
             $('#UpdateSubmit input[name=activity]').attr('checked', false);
             $('#UpdateSubmit input[name=activity]').attr('value',active);
         }
  
-         console.log(tr);
- 
          $('#UpdateSubmit').submit(function (e) {
              e.preventDefault();
              var value = new FormData(this);
- 
+
+             if(!value.get('activity')){
+                value.append('activity',0);
+             }
+
+             console.log(value);
+
              iziToast.info({
                      title: 'انتظر',
                      message: 'انتظر الى حين المعالجة',

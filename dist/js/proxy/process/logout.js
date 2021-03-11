@@ -6,37 +6,6 @@ const token = Local("get","token");
 $(document).ready(function(){
 
     $('#logout').click(function(){
-    //     var r = confirm("هل تريد الخروج ؟");
-    //         if(r == true){
-
-    //             iziToast.info({
-    //                     title: 'انتظر',
-    //                     message: `انتظر لحظة !!`,
-    //                     timeout: 10000,
-    //                 });
-
-    //             post("user/logout", {token},true).then(res => {
-    //                 if(res.error){
-
-    //                     iziToast.error({
-    //                             title: 'خطأ',
-    //                              message: `${res.error}`
-    //                         });
-    //                     return 0;
-    //                 }
-    //                 console.log(res);
-
-    //                 iziToast.success({
-    //                         title: 'خطأ',
-    //                          message: `تم تسجيل خروجك بنجاح`
-    //                     });
-
-    //                 setTimeout(()=>{
-    //                     window.location.href = "main.html";
-    //                 },1000);
-    //             }).catch(err => console.log(err));
-    //         }
-    // })
 
     iziToast.question({
         timeout: 20000,
@@ -63,7 +32,7 @@ $(document).ready(function(){
                     console.log(res);
 
                     iziToast.success({
-                            title: 'خطأ',
+                            title: 'نجاح',
                              message: `تم تسجيل خروجك بنجاح`
                         });
 

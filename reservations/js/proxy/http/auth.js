@@ -4,7 +4,7 @@ export const auth = get('user/checkUser',true).then(res => {
     let access = ['admin','pharmacy','hospital','lab'];
 
     if(res.data.accountType == 'admin'){
-        $("#userDropdown").parent().html('<button class="btn btn-light"><a href="../../dist/main.html">الرجوع لدواكم</a></button>');
+        $("#userDropdown").parent().html('<button class="btn btn-light"><a href="../../dist/index.html">الرجوع لدواكم</a></button>');
     }
     // i have to send a response to tell if im admin or somthing else
     if(access.includes(res.data.accountType)){

@@ -14,6 +14,8 @@ export const Store = (value) => {
       
       post('admin/adminLogin', value, false, 'application/json')
         .then((res) => {
+          
+          alert(JSON.stringify(res));
 
           console.log(res);
           if(res.error){

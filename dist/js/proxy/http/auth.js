@@ -5,6 +5,10 @@ export const auth = get('user/userHolder',true).then(res => {
 
     // i have to send a response to tell if im admin or somthing else
     if(access.includes(res.accountType)){
+        if(res.accountType == 'admin'){
+            $("#reservationSys").css("visibility","visible");
+        }
+
         if(res.accountType == 'hospital' || res.accountType == 'lab'){
             console.log(res.accountType);
             window.location.href = '../reservations/index.html';

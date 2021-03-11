@@ -76,7 +76,9 @@
              var value = new FormData(this);
 
              if(!value.get('activity')){
-                value.append('activity',0);
+                value.append('activity', 0);
+             }else{
+                value.append('activity', 1);
              }
 
              console.log(value);

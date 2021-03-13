@@ -21,7 +21,6 @@ let sidenav =  `<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAcc
 
            </ul>
 
-            ${access.position.doctors ? '<a class="nav-link" href="doctors.html">الأطباء </a>' : ''}
             ${access.position.allDoctors ? '<a class="nav-link" href="allDoctors.html">الأطباء </a>' : ''}
             ${access.position.hospitalDoctors ? '<a class="nav-link" href="hospitalDoctors.html">أطبائي</a>' : ''}
             ${access.position.labInvoices ? '<a class="nav-link" href="labInvoices.html">فواتير المعمل</a>' : ''}

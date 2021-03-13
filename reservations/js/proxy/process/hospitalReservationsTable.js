@@ -50,31 +50,28 @@
         $(document).on('click','.edit' ,function(){
 
  
-        //  var id = $(this).attr('value');
-        //  var tr = $(this).parent().parent().parent().attr('id',id);
+         var id = $(this).attr('value');
+         var tr = $(this).parent().parent().parent().attr('id',id);
  
-        //  $('#UpdateSubmit input[name=reservationsToken]').val($(`#${id} .reservationsToken`).text());
-        //  $('#UpdateSubmit input[name=note]').val( $(`#${id} .note`).text());
+         $('#UpdateSubmit #reservationsToken').val($(`#${id} .token`).text());
+         var active = $(`#${id} .response`).text();
 
-        //  var active = $(`#${id} .response`).text();
-
-        // if(active == "on"){
-        //     $('#UpdateSubmit input[name=response]').attr('checked', true);
-        //     $('#UpdateSubmit input[name=response]').attr('value',1);
-        // }if(active == "off"){
-        //     $('#UpdateSubmit input[name=response]').attr('checked', false);
-        //     $('#UpdateSubmit input[name=response]').attr('value',0);
-        // }
- 
+        if(active == "on"){
+            $('#UpdateSubmit input[name=response]').attr('checked', true);
+            $('#UpdateSubmit input[name=response]').attr('value',1);
+        }if(active == "off"){
+            $('#UpdateSubmit input[name=response]').attr('checked', false);
+            $('#UpdateSubmit input[name=response]').attr('value',0);
+        }
  
          $('#UpdateSubmit').submit(function (e) {
              e.preventDefault();
              var value = new FormData(this);
 
                 if(value.get('response') == "on"){
-                    value.set('response',1);
+                    value.set('response', 1);
                 }else{
-                    value.set('response',0);
+                    value.set('response', 0);
                 }
  
              iziToast.info({

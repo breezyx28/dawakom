@@ -20,15 +20,10 @@ export const get = (
     },
   })
     .then((res) => {
-
-        return res.data;
-
+      return res.data;
     })
     .catch((err) => {
-     
-
       return err.response.data;
-
     });
 };
 
@@ -51,15 +46,13 @@ export const post = (
   })
     .then((res) => {
       console.log(res.data);
-     
+
       return res;
     })
     .catch((err) => {
-   
       console.log(err);
       return err.response.data;
-    } 
-    );
+    });
 };
 
 // PUT Request
@@ -70,27 +63,21 @@ export const put = (
   type = 'application/json',
   providedToken = token,
 ) => {
-
   const jsonate = (data) => {
     let object = {};
-    
-    try {
 
-      data.forEach((value, key) =>  {
-        if(value.length > 0) {
+    try {
+      data.forEach((value, key) => {
+        if (value.length > 0) {
           object[key] = value;
         }
       });
 
-        return object;
-
+      return object;
     } catch (error) {
-        return data;
+      return data;
     }
-  }
-
-console.log(jsonate(formData));
-
+  };
 
   return axios({
     method: 'PUT',
@@ -103,15 +90,13 @@ console.log(jsonate(formData));
   })
     .then((res) => {
       console.log(res.data);
-     
+
       return res;
     })
     .catch((err) => {
-   
       console.log(err);
       return err.response.data;
-    } 
-    );
+    });
 };
 
 // DELETE Request
@@ -133,20 +118,22 @@ export const DELETE = (
   })
     .then((res) => {
       console.log(res.data);
-     
+
       return res;
     })
     .catch((err) => {
-   
       console.log(err);
       return err.response.data;
-    } 
-    );
+    });
 };
 
 export const userInfo = () => {
-  get('admin/settings',
-    auth = true,
-    type = 'application/json',
-    providedToken = token).then((res)=>console.log(res)).catch(err => console.log(err.response.data));
-  }
+  get(
+    'admin/settings',
+    (auth = true),
+    (type = 'application/json'),
+    (providedToken = token),
+  )
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err.response.data));
+};

@@ -23,7 +23,11 @@ $(document).ready(function(){
     } },
     
     { data: "activity",className :'activity',render : function(data,type){
-        return data;
+        if(data == 1){
+            return '<div class="text-success">نشط</div>';
+        }else{
+            return '<div class="text-danger">موقوف</div>';
+        }
     } },
     { data: "id",
         render : function(data,type,row,meta){
@@ -37,7 +41,7 @@ $(document).ready(function(){
 
 switch (pageName) {
             case 'doctors':
-                doctorTable('doctors', column, true, true, 'doctors', 'doctors');
+                doctorTable('hospital/hospitalDoctor', column, true, true, 'delete/hospitalDoctors', 'update/hospitalDoctors');
                 break;
 }
 

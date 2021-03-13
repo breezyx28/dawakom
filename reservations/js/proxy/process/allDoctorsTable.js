@@ -53,7 +53,7 @@
          var tr = $(this).parent().parent().parent().attr('id',id);
  
          $('#UpdateSubmit input[name=name]').val($(`#${id} .name`).text());
-         $('#UpdateSubmit input[name=phone]').val( $(`#${id} .phone`).text());
+        //  $('#UpdateSubmit input[name=phone]').val( $(`#${id} .phone`).text());
          $('#UpdateSubmit input[name=gender]').val($(`#${id} .gender`).val());
          $('#UpdateSubmit input[name=email]').val($(`#${id} .email`).text());
 
@@ -72,6 +72,12 @@
          $('#UpdateSubmit').submit(function (e) {
              e.preventDefault();
              var value = new FormData(this);
+
+             if(!value.get('activity')){
+                value.append('activity', 0);
+             }else{
+                value.append('activity', 1);
+             }
  
              iziToast.info({
                      title: 'انتظر',

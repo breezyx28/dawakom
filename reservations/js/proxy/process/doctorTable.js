@@ -4,7 +4,7 @@
 
  export const doctorTable = (url, columns = [], edit = true , remove = true, deleteUrl, updateUrl) => {
  
-     get('admin/'+url, true,'application/json').then(res => {
+     get('user/'+url, true,'application/json').then(res => {
  
      $(document).ready(function(){
      
@@ -52,7 +52,7 @@
          var tr = $(this).parent().parent().parent().attr('id',id);
  
          $('#UpdateSubmit input[name=name]').val($(`#${id} .name`).text());
-         $('#UpdateSubmit input[name=phone]').val( $(`#${id} .phone`).text());
+        //  $('#UpdateSubmit input[name=phone]').val( $(`#${id} .phone`).text());
          $('#UpdateSubmit input[name=gender]').val($(`#${id} .gender`).val());
          $('#UpdateSubmit input[name=email]').val($(`#${id} .email`).text());
 
@@ -66,11 +66,15 @@
             $('#UpdateSubmit input[name=activity]').attr('value',active);
         }
  
-         console.log(tr);
- 
          $('#UpdateSubmit').submit(function (e) {
              e.preventDefault();
              var value = new FormData(this);
+
+             if(!value.get('activity')){
+                value.append('activity', 0);
+             }else{
+                value.append('activity', 1);
+             }
  
              iziToast.info({
                      title: 'انتظر',
@@ -78,7 +82,7 @@
                      timeout : 1000,
                  });
  
-             put(`admin/${updateUrl}/${id}`,value, true, 'application/json')
+             put(`user/${updateUrl}/${id}`,value, true, 'application/json')
                  .then(res => {
                     console.log(res);
                     notify(res);
@@ -109,7 +113,7 @@
              buttons: [
                  ['<button><b>نعم</b></button>', function (instance, toast) {
                      
-                     DELETE(`admin/${deleteUrl}/${id}`, true, 'application/json').then(res => {
+                     DELETE(`user/${deleteUrl}/${id}`, true, 'application/json').then(res => {
                          window.location.reload();
                          // alert
                         return notify(res);

@@ -36,7 +36,7 @@ auth.then(res => {
                     "hospitals" : false,
                     "hospitalDoctors" : true,
                     "labs" : false,
-                    "doctors" : false,
+                    "doctors" : true,
                     "index" :true,
                     "reservations" : true,
                     "profile" : true,
@@ -60,6 +60,7 @@ auth.then(res => {
                     "allHospitalServices" : false,
                     "allLabReservations" : false,
                     "allHospitalReservations" : false,
+                    "allDoctors" : false,
                     }
         }       
 
@@ -101,6 +102,7 @@ auth.then(res => {
                     "allHospitalServices" : false,
                     "allLabReservations" : false,
                     "allHospitalReservations" : false,
+                    "allDoctors" : false,
                     }
         }       
 
@@ -130,7 +132,7 @@ auth.then(res => {
 
                 "hospitals" : true,
                 "labs" : true,
-                "doctors" : true,
+                "doctors" : false,
                 "hospitalDoctors" : false,
                 "invoices" : false,
                 "reservations" : false,
@@ -146,7 +148,7 @@ auth.then(res => {
                 "labReservations" : false,
                 "hospitalReservations" : false,
                 "labSchedule" : false,
-
+                "allDoctors" : true,
                 }
     }
 

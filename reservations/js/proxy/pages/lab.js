@@ -27,17 +27,21 @@ $(document).ready(function(){
     { data: "email",className :'email',render : function(data,type){
         return `<email class="text-success">${data}</email>`;
     } },
-    { data: "companyEarns",className :'companyEarns',render : function(data,type){
-        return data;
-    } },
     { data: "lat",className :'lat',render : function(data,type){
         return data;
     } },
     { data: "lng",className :'lng',render : function(data,type){
         return data;
     } },
+    { data: "companyEarns",className :'companyEarns',render : function(data,type){
+        return '<i class="text-muted">'+data+'%</i>';
+    } },
     { data: "activity",className :'activity',render : function(data,type){
-        return data;
+        if(data == 1){
+            return '<div class="text-success">نشط</div>';
+        }else{
+            return '<div class="text-danger">موقوف</div>';
+        }
     } },
     { data: "id",
         render : function(data,type,row,meta){
